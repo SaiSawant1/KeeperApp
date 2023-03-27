@@ -1,0 +1,48 @@
+.input-container{
+    margin: 3rem auto;
+    height: 10rem;
+    width: 40rem;
+    background-color: #E4DCCF;
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: -7px 52px 42px -18px rgba(0,0,0,0.75);
+}
+#input-title{
+    display: block;
+    height: 4rem;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+    border: none;
+    color: #002B5B ;
+    background-color: transparent;
+}
+#input-title:focus,
+#input-title:active{
+    border: none;
+    outline: none;
+}
+#input-text{
+    display: block;
+    height: 6rem;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: none;
+    color: #002B5B ;
+    background-color: transparent;
+    overflow: hidden;
+}
+.input-btn{
+    position: absolute;
+    right: 2rem;
+    transform: translateY(-50%);
+    background-color: #002B5B;
+    color:#F9F5EB ;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: none;
+    text-align: center;
+}
