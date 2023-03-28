@@ -1,10 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faTrash} from "@fortawesome/free-solid-svg-icons"
+import {faPencil} from "@fortawesome/free-solid-svg-icons"
 function Card(props){
     const {id} = props
     function handleClick(){
         props.deleteBtn(id)
+    }
+    function handleEdit(){
+        props.editBtn()
     }
 
     return(
@@ -17,6 +21,7 @@ function Card(props){
                     {props.text}
                 </p>
             </div>
+            <button onClick={handleEdit} className='card-btn-edit'><FontAwesomeIcon icon={faPencil} /></button>
             <button onClick={handleClick} className='card-btn'><FontAwesomeIcon icon={faTrash} /></button>
         </div>
 

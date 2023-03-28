@@ -34,3 +34,16 @@
     font-size: 1rem;
     border: none;
 }
+.card-btn-edit{
+    position: absolute;
+    transform: translateY(50%);
+    bottom: 0;
+    left: 2rem;
+    background-color: #002B5B;
+    color:#F9F5EB ;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    border: none;
+}

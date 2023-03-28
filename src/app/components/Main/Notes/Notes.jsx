@@ -11,6 +11,7 @@ function Notes(props){
             id={index}
             title={note.title}
             text={note.text}
+            editBtn={props.editBtn}
             />))}
         </div>
     )

@@ -3,9 +3,12 @@ import React from 'react';
 import { useState } from 'react';
 import Input from "./Input/Input"
 import Notes from "./Notes/Notes"
+import "./main.css"
 function Main(){
     const [notes,changeNotes]=useState([])
     
+    const [overlayState,changeOverlayState]=useState(false)
+
     const addItem=(newNote)=>{
         changeNotes((prev)=>{
             return [...prev,newNote]
@@ -18,18 +21,22 @@ function Main(){
             })
         })
     }
-    console.log(notes)
+    function editBtn(){
+        changeOverlayState((prev)=>{
+            return !prev
+        })
+    }
     return(
-        <>
-        <Input
-            addBtn={addItem}
-        />
-        {notes.length>0 ? <Notes
-        noteArr={notes}
+        <main className={overlayState ? "main overlay":".main"}>
+            <Input
+                addBtn={addItem}
+            />
+            {notes.length>0 ? <Notes
+            noteArr={notes}
             deleteBtn={deleteItem}
-        /> : null }
-        
-        </>
+            editBtn={editBtn}
+            /> : null }
+        </main>
     )
 }
 
